@@ -1,7 +1,5 @@
 import streamlit as st
 import re
-import os
-from dotenv import load_dotenv
 from typing import TypedDict, List, Tuple
 from langchain.chains import ConversationalRetrievalChain
 from langchain_openai import AzureOpenAIEmbeddings, AzureChatOpenAI
@@ -13,8 +11,6 @@ from langchain_core.messages import HumanMessage
 from langchain_core.runnables import RunnableSequence
 from langchain_core.output_parsers import StrOutputParser
 from services import get_azure_llm, get_vectordb
-
-load_dotenv()
 
 class ChatState(TypedDict, total=False):
     question: str

@@ -1,6 +1,3 @@
-import os
-from dotenv import load_dotenv
-load_dotenv()
 import streamlit as st
 from knowledge_base import knowledge_base_tab
 from chat import chat_tab

@@ -4,3 +4,4 @@
 .chromadb/67c14b01-8d45-415e-9bbc-989cf4b5682a/length.bin
 .chromadb/67c14b01-8d45-415e-9bbc-989cf4b5682a/link_lists.bin
 .chromadb/chroma.sqlite3
+.streamlit/secrets.toml

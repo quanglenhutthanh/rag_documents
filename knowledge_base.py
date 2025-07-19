@@ -5,17 +5,7 @@ from langchain_openai import AzureOpenAIEmbeddings, AzureChatOpenAI
 from langchain_community.vectorstores import Chroma
 import docx2txt
 from PyPDF2 import PdfReader
-
-def get_vectordb():
-    load_dotenv()
-    embeddings = AzureOpenAIEmbeddings(
-        azure_endpoint=os.getenv("AZURE_OPENAI_EMBEDDING_ENDPOINT"),
-        api_key=os.getenv("AZURE_OPENAI_EMBEDDING_API_KEY"),
-        model=os.getenv("AZURE_OPENAI_EMBEDDING_MODEL"),
-        api_version="2024-07-01-preview"
-    )
-    vectordb = Chroma(persist_directory=".chromadb", embedding_function=embeddings)
-    return vectordb
+from services import get_vectordb
 
 def parse_pdf(file) -> str:
     reader = PdfReader(file)

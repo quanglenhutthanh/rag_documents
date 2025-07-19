@@ -1,9 +1,9 @@
 import os
-from dotenv import load_dotenv
+import streamlit as st
 from langchain_openai import AzureOpenAIEmbeddings, AzureChatOpenAI
 from langchain.vectorstores import Chroma
 
-load_dotenv()
+
 
 def get_vectordb():
     embeddings = AzureOpenAIEmbeddings(
